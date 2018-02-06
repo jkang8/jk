@@ -22,6 +22,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/jk.css' %}">
 
         {% block extra_css %}
@@ -31,8 +32,14 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-
+        <nav>
+            <ul><a href="/">John Kang</a></ul>
+            <ul><a href="/contact">Contact</a></ul>
+        </nav>
+        <h1>{{ page.title }}</h1>
+        <div class="content-wrapper">
         {% block content %}{% endblock %}
+        </div>
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/jk.js' %}"></script>
