@@ -1,19 +1,20 @@
+@import "variables";
+
 .grid-container {
   display: grid;
-  grid-template-areas: "nav" "content" "footer";
+  grid-template-areas: "nav" "header" "content-wrapper";
   margin: 0 auto;
   padding: 4em 1em;
   max-width: 50em;
 }
 
-nav {
-  grid-area: nav;
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
 }
 
-.content {
-  grid-area: content;
+.content-wrapper {
+  grid-area: content-wrapper;
 }
 
-.footer {
-  grid-area: footer;
-}

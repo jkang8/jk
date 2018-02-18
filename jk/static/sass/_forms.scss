@@ -1,15 +1,44 @@
 .form-field-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form-field-container label {
-  
+  padding: 7px;  
 }
 
 .form-field-container input {
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 17px;
+  border: 1px solid #CFCFCF;
+  &:focus {
+    border: 1px solid $blueberry;
+  }
 }
 
 .form-field-container textarea {
+  padding: 20px 20px;
+  border-radius: 8px;
+  border: 1px solid #CFCFCF;
+  &:focus {
+    border: 1px solid $blueberry;
+  }
+}
+
+.primary-button {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: $blueberry;
+  height: 48px;
+  border-radius: 24px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-spacing: 0.6px;
+  color: white;
+  border-style: none;
+  outline-style: none;
+  min-width: 144px;
 }
