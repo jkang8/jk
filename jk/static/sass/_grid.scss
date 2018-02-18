@@ -1,0 +1,19 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: "nav" "content" "footer";
+  margin: 0 auto;
+  padding: 4em 1em;
+  max-width: 50em;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}

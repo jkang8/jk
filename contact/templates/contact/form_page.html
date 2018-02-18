@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+
+{% block body_class %}{% endblock %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<form action="{% pageurl page %}" method="POST">
+  {% csrf_token %}
+  {% for field in form %}
+    <div class="form-field-container">
+      {{ field.errors }}
+      {{ field.label_tag }}
+      {{ field }}
+    </p>
+  </div>
+  {% endfor %}
+  <input type="submit">
+</form>
+{% endblock %}
