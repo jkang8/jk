@@ -128,7 +128,9 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
 ]
+SASS_PRECISION = 8
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
