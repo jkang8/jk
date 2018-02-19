@@ -142,7 +142,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# SASS_PROCESSOR_ROOT = STATIC_ROOT
+SASS_PROCESSOR_ROOT = STATIC_ROOT
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "jk"
