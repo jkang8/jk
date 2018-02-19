@@ -1,12 +1,90 @@
 @import "variables";
 
-.grid-container {
-  display: grid;
-  grid-template-areas: "nav" "header" "content-wrapper";
-  margin: 0 auto;
-  padding: 2em 8em;
-  max-width: 36em;
+/* Large desktop */
+@media (min-width: 1200px) { 
+  .grid-container {
+    display: grid;
+    grid-template-areas: "nav" "header" "content-wrapper";
+    margin: 0 auto;
+    padding: 2em 8em;
+    max-width: 36em;
+  }
 }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 980px) and (max-width: 1199px) {  
+  .grid-container {
+    display: grid;
+    grid-template-areas: "nav" "header" "content-wrapper";
+    margin: 0 auto;
+    padding: 2em 8em;
+    max-width: 36em;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {  
+  .grid-container {
+    display: grid;
+    grid-template-areas: "nav" "header" "content-wrapper";
+    margin: 0 auto;
+    padding: 2em 8em;
+    max-width: 36em;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {  
+  .grid-container {
+    display: grid;
+    grid-template-areas: "nav" "header" "content-wrapper";
+    margin: 0 auto;
+    padding: 2em 1.3em;
+    max-width: 36em;
+  }
+  .header {
+    justify-content: center;
+  }
+  ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .primary-button {
+    width: 100%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {  
+  .grid-container {
+    display: grid;
+    grid-template-areas: "nav" "header" "content-wrapper";
+    margin: 0 auto;
+    padding: 2em 1.3em;
+    max-width: 36em;
+  }
+  .header {
+    justify-content: center;
+  }
+  nav {
+    ul {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .primary-button {
+    width: 100%;
+  }
+}
+
+
+// .grid-container {
+//   display: grid;
+//   grid-template-areas: "nav" "header" "content-wrapper";
+//   margin: 0 auto;
+//   padding: 2em 8em;
+//   max-width: 36em;
+// }
 
 nav {
   grid-template: "nav";
