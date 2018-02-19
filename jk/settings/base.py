@@ -29,7 +29,9 @@ INSTALLED_APPS = [
     'home',
     'search',
     'contact',
-    
+
+    'sass_processor',
+
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
     'wagtail.wagtailembeds',
@@ -84,6 +86,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(PROJECT_DIR, 'jk/sass'),
 ]
 
 WSGI_APPLICATION = 'jk.wsgi.application'
