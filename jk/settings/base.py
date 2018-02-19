@@ -91,6 +91,7 @@ TEMPLATES = [
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(PROJECT_DIR, 'jk/sass'),
+    'sass',
 ]
 
 WSGI_APPLICATION = 'jk.wsgi.application'
@@ -139,7 +140,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SASS_PROCESSOR_ROOT = STATIC_ROOT
+# SASS_PROCESSOR_ROOT = STATIC_ROOT
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "jk"
