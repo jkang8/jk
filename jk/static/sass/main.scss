@@ -2,7 +2,6 @@
 @import '_grid';
 @import '_forms';
 @import '_normalize';
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 * {
   box-sizing: border-box;
@@ -11,7 +10,7 @@
 body {
   // margin: 0 auto;
   // max-width: 50em;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.4;
   color: #555;
 }
@@ -30,10 +29,12 @@ h1 {
   line-height: 1.05em;
   // border-bottom: 2px solid #333;
   padding-bottom: 20px;
+  font-weight: 800;
 }
 h2 {
   font-size: 2.25em;
   line-height: 1.25em;
+  font-weight: 700;
 }
 
 p {
