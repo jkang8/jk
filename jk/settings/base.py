@@ -90,7 +90,7 @@ TEMPLATES = [
 ]
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
-    os.path.join(PROJECT_DIR, 'jk/sass'),
+    os.path.join(BASE_DIR, 'jk/sass'),
     'sass',
 ]
 
@@ -131,7 +131,7 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
