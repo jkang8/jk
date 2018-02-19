@@ -90,7 +90,7 @@ TEMPLATES = [
 ]
 
 SASS_PROCESSOR_INCLUDE_DIRS = [
-    os.path.join(BASE_DIR, 'jk/sass'),
+    os.path.join(BASE_DIR, 'jk/static/sass'),
     'sass',
 ]
 
