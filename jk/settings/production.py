@@ -1,9 +1,11 @@
 from __future__ import absolute_import, unicode_literals
 
-from .base import *
+from base import *
 import django_heroku
 
 django_heroku.settings(locals())
+SECRET_KEY = os.environ['SECRET_KEY']
+
 DEBUG = False
 
 ALLOWED_HOSTS = (
