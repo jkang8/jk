@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'contact',
 
     'sass_processor',
+    'raven.contrib.django.raven_compat',
 
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
@@ -146,6 +147,16 @@ WAGTAIL_SITE_NAME = "jk"
 # Base URL to use when referring to full URLs within the Wagtail admin backend
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+
+# Logging
+import raven
+RAVEN_CONFIG = {
+    'dsn': 'https://3626a5788b8649958d1f32c48d115510:04f3d14af861431cbe26949985b7c60b@sentry.io/290711',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
+}
 
 LOGGING = {
     'version': 1,
