@@ -34,21 +34,25 @@
   {% wagtailuserbar %}
   <div class="grid-container">
     <nav>
-      <ul><a href="/">About</a></ul>
-      <ul><a href="/contact">Contact</a></ul>
+      <ul>
+        <a href="/">About</a>
+        <a href="/contact">Contact</a>
+      </ul>
     </nav>
     <div class="header">
       <h1>{{ page.title }}</h1>
     </div>
-    <div class="line"></div>
     <div class="content-wrapper">
       {% block content %}{% endblock %}
     </div>
+    <footer>
+      <ul>
+        <a class="social-link" href="#">LinkedIn</a>
+        <a class="social-link" href="#">Github</a>
+        <a class="social-link" href="#">Instagram</a>
+      </ul>
+    </footer>
   </div>
-  <footer>
-    <ul>
-    </ul>
-  </footer>
 
   {# Global javascript #}
   <script type="text/javascript" src="{% static 'js/jk.js' %}"></script>
