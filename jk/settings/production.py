@@ -1,9 +1,13 @@
 from __future__ import absolute_import, unicode_literals
 
 from .base import *
+import os
 import django_heroku
 
 django_heroku.settings(locals())
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
@@ -15,6 +19,19 @@ ALLOWED_HOSTS = (
     'www.johnkang.co',
 )
 
+MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+]
 
 # MIDDLEWARE_CLASSES = (
 #     # Simplified static file serving.
@@ -22,7 +39,9 @@ ALLOWED_HOSTS = (
 #     'whitenoise.middleware.WhiteNoiseMiddleware',
 # )
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Logging
 LOGGING = {
