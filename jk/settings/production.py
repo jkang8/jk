@@ -12,6 +12,7 @@ DEBUG = True
 ALLOWED_HOSTS = (
     'morning-sea-64598.herokuapp.com',
     'johnkang.co',
+    'www.johnkang.co',
 )
 
 
