@@ -7,7 +7,7 @@ django_heroku.settings(locals())
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = (
     'morning-sea-64598.herokuapp.com',
