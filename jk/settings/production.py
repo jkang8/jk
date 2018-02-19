@@ -19,7 +19,7 @@ ALLOWED_HOSTS = (
 MIDDLEWARE_CLASSES = (
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
