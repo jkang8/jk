@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'search',
     'contact',
 
-    'sass_processor',
+    'storages',
     'raven.contrib.django.raven_compat',
 
     'wagtail.wagtailforms',
@@ -89,11 +89,6 @@ TEMPLATES = [
     },
 ]
 
-SASS_PROCESSOR_INCLUDE_DIRS = [
-    os.path.join(BASE_DIR, 'jk/static/sass'),
-    'sass',
-]
-
 WSGI_APPLICATION = 'jk.wsgi.application'
 
 
@@ -128,21 +123,19 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
 ]
-SASS_PRECISION = 8
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(PROJECT_DIR, 'static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SASS_PROCESSOR_ROOT = STATIC_ROOT
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "jk"

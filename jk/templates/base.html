@@ -1,5 +1,4 @@
 {% load static wagtailuserbar %}
-{% load sass_tags %}
 {% load raven %}
 
 <!DOCTYPE html>
@@ -23,9 +22,9 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}" />
 
   {# Global stylesheets #}
-  <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
 
   {% block extra_css %}
   {# Override this in templates to add extra stylesheets #}
